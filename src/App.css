@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.makeStyles-paper-1 {
+  background-color: white;
+}
+
+.makeStyles-paper-1 div {
+  background-color: none !important;
+}

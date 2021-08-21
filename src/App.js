@@ -4,6 +4,7 @@ import { Button, FormControl, Input, InputLabel } from "@material-ui/core";
 import Todo from "./Todo";
 import db from "./firebase";
 import firebase from "firebase";
+import AddIcon from "@material-ui/icons/Add";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -46,13 +47,13 @@ function App() {
           disabled={!input}
           color="primary"
         >
-          Add Todo
+          <AddIcon />
         </Button>
       </form>
 
       <ul>
-        {todos.map((todo) => (
-          <Todo todo={todo} />
+        {todos.map((todo, index) => (
+          <Todo key={index} todo={todo} />
         ))}
       </ul>
     </>
